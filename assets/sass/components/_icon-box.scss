@@ -1,0 +1,199 @@
+/* Icon-box */
+.widget-icon-box {
+	padding: 12px 0;
+	border-bottom: 1px solid rgba(250,250,250,0.12);
+	width: 100%;
+	text-align: center;
+
+	@media (min-width: $screen-md-min) {
+		float: left;
+		padding: 8px 0;
+		width: auto;
+		border-bottom: 0;
+		text-align: left;
+	}
+
+	.icon-box {
+		text-align: left;
+		color: $text-color;
+
+		&:hover {
+			text-decoration: none;
+
+			.fa {
+				transition: $primary-transition;
+				color: #dddddd;
+			}
+		}
+	}
+
+	&:first-of-type {
+		border-top: 1px solid rgba(250,250,250,0.12);
+
+		@media (min-width: $screen-md-min) {
+			border-top: 0;
+		}
+	}
+
+	div.icon-box {
+		cursor: default;
+	}
+}
+
+.icon-box {
+	width: 230px;
+	display: inline-block;
+	padding-right: 15px;
+	margin-left: 15px;
+	text-align: left;
+
+	@media (min-width: $screen-md-min) {
+		border-right: 1px solid rgba(250,250,250,0.12);
+		width: 210px;
+	}
+
+	> .fa {
+		float: left;
+		font-size: 40px;
+		margin-right: 10px;
+	}
+}
+
+.icon-box__title {
+	margin: 4px 0 0 0;
+	font-size: 14px;
+	font-weight: bold;
+	color: #dddddd;
+}
+
+.icon-box__subtitle {
+	color: $text-color;
+}
+
+// For Page Builder
+.widget_pt_icon_box {
+	.icon-box {
+		width: auto;
+
+		> .fa {
+			color: $primary-color;
+		}
+	}
+
+	.icon-box__title {
+		color: #333333;
+	}
+}
+
+/* Icon-box With Flexbox*/
+html.flexbox {
+	.header-widgets {
+		@media (min-width: $screen-md-min) {
+			display: flex;
+			justify-content: center;
+			float: none;
+		}
+
+		@media (min-width: $screen-lg-min) {
+			justify-content: flex-end;
+		}
+	}
+
+	.widget-icon-box {
+		// justify-content: center;
+
+		@media (min-width: $screen-md-min) {
+			display: flex;
+			justify-content: flex-start;
+			float: none;
+		}
+
+		.icon-box {
+			width: auto;
+			display: inherit;
+		}
+
+		.icon-box__text {
+			flex-direction: column;
+			margin-left: 50px;
+
+			@media (min-width: $screen-md-min) {
+				margin-left: 0;
+			}
+		}
+	}
+
+	.widget-social-icons {
+		@media (min-width: $screen-md-min) {
+			float: none;
+		}
+	}
+}
+
+// Icon Box in Top Bar.
+.top {
+	.icon-box {
+		@media (min-width: $screen-md-min) {
+			border-right: 0;
+		}
+
+		.fa {
+			font-size: 20px;
+		}
+
+		&__title {
+			display: inline-block;
+			margin-top: 0;
+			color: #bbbbbb;
+		}
+
+		&__subtitle {
+			color: #bbbbbb;
+		}
+	}
+
+	.widget-icon-box {
+		padding: 13px 0 11px;
+
+		.icon-box {
+			color: #bbbbbb;
+		}
+	}
+}
+
+// Icon Box style for Empty page template.
+.page-template-template-empty {
+	.icon-box {
+		border-right: 0;
+
+		.fa {
+			font-size: 24px;
+			border: 1px dashed #666666;
+			border-radius: 2px;
+			width: 50px;
+			height: 50px;
+			text-align: center;
+			line-height: 50px;
+		}
+
+		&__title {
+			font-size: 18px;
+			font-weight: normal;
+			color: #afb0b0;
+		}
+
+		&__subtitle {
+			font-size: 18px;
+			font-weight: bold;
+			color: $primary-color;
+		}
+	}
+
+	.widget_pt_icon_box {
+		.icon-box {
+			> .fa {
+				color: #666666;
+			}
+		}
+	}
+}

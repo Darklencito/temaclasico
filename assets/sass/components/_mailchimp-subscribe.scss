@@ -1,0 +1,26 @@
+/* MailChimp Subscribe */
+#mc_embed_signup {
+	label {
+		text-align: center;
+		font-size: 18px;
+		color: $dark-color;
+		text-transform: uppercase;
+		margin-bottom: 20px;
+		width: 100%;
+	}
+
+	.form-control {
+		background: $light-color;
+		border-radius: 2px;
+		border: 1px solid #dddddd;
+		box-shadow: none;
+		width: 100%;
+		padding: 23px 20px;
+		margin-bottom: 15px;
+
+		&:focus {
+			border-color: #dddddd;
+			background: #ffffff;
+		}
+	}
+}

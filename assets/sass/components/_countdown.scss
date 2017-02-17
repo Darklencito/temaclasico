@@ -1,0 +1,65 @@
+/* Countdown */
+.countdown {
+	.flip {
+		display: inline-block;
+		float: none;
+		border-radius: 0;
+
+		+ .flip {
+			margin-left: -5px;
+		}
+	}
+
+	.flip-clock-divider {
+		float: none;
+
+		@media (max-width: $screen-sm-min) {
+			display: block;
+			height: 30px;
+			width: 100%;
+		}
+
+		&:first-child {
+			@media (max-width: $screen-sm-min) {
+				width: 100%;
+			}
+		}
+
+		.flip-clock-label {
+			font-size: 14px;
+			font-weight: bold;
+			color: #ffffff;
+			top: inherit;
+			bottom: -20px;
+			text-transform: uppercase;
+
+			@media (max-width: $screen-sm-min) {
+				left: 0;
+				right: 0;
+				width: 100%;
+				bottom: -125px;
+			}
+		}
+	}
+
+	&.flip-clock-wrapper ul,
+	&.flip-clock-wrapper ul li a div.up div.inn,
+	&.flip-clock-wrapper ul li a div.down,
+	&.flip-clock-wrapper ul li a div.down div.inn {
+		border-radius: 0;
+		color: #ffffff;
+	}
+
+	.flip-clock-dot {
+		background: #999999;
+		box-shadow: none;
+
+		@media (max-width: $screen-sm-min) {
+			display: none;
+		}
+
+		.top {
+			border: 0;
+		}
+	}
+}

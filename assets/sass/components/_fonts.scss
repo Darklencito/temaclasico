@@ -1,0 +1,25 @@
+/* Specific style for specific fonts */
+.secondary-font-roboto-slab {
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		letter-spacing: 0;
+		line-height: 1.5;
+	}
+
+	.widget_nav_menu ul,
+	.sidebar .widget_nav_menu ul {
+		font-weight: bold;
+	}
+
+	.btn {
+		font-weight: bold;
+	}
+}
+
+.primary-font-open-sans {
+	line-height: 1.6;
+}
